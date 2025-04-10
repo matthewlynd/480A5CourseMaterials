@@ -134,36 +134,6 @@ def ttest(a, b):
 
 #*********************
 # Matthew L will present on the topic of Lilliefors test, creating function named 'lilliefors' 
-#!pip install statsmodels
-from statsmodels.stats.diagnostic import lilliefors as sm_lilliefors
-
-def lilliefors(data):
-    '''
-    Perform the Lilliefors test for normality.
-    
-    Parameters:
-    data : array_like
-        The dataset to test for normality.
-        
-    Returns:
-    stat : float
-        The test statistic (maximum distance between ECDF and CDF).
-    p_value : float
-        The p-value from the Lilliefors test.
-    
-    Example:
-    >>> data = [2.1, 2.3, 1.9, 2.5, 2.0]
-    >>> stat, p_value = lilliefors(data)
-    >>> print(stat)
-    >>> print(p_value)
-    
-    Notes:
-    The test is similar to the Kolmogorov-Smirnov test but allows estimating
-    the mean and variance from the data. It is suitable when population
-    parameters are unknown.
-    '''
-    stat, p_value = sm_lilliefors(data)
-    return stat, p_value
 
 #*********************
 # Hassan M will present on the topic of Partial correlation test, creating function named 'partial_corr' 
